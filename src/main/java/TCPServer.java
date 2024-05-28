@@ -1,29 +1,10 @@
-/* Protoype
 import java.io.*;
 import java.net.*;
 
 public class TCPServer {
-    public void build() throws IOException {
-        int portNumber = 9090;
-        ServerSocket serverSocket = new ServerSocket(portNumber); {
-            System.out.println("Server is running and listening on port " + portNumber);
-            while (true) {
-                Socket clientSocket = serverSocket.accept();
-                System.out.println("New client connected: " + clientSocket.getInetAddress().getHostAddress());
-
-                // Handle client connection in a separate thread or process
-                // (not shown in this example for brevity)
-            }
-        }
-    }
-}*/
-
-import java.io.*;
-import java.net.*;
-
-public class TCPServer {
+    private int port;
+    
     public void main() {
-        int port = 9090;
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Server is listening on port " + port);
 
@@ -38,6 +19,11 @@ public class TCPServer {
             System.out.println("Server exception: " + ex.getMessage());
             ex.printStackTrace();
         }
+    }
+    // Setting the port number that was made in Main
+    public void setPort(int x) {
+        this.port = x;
+        System.out.println("Server Port set to " + port);
     }
 }
 

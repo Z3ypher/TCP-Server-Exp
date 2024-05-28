@@ -2,9 +2,11 @@ import java.io.*;
 import java.net.*;
 
 public class TCPClient {
+    private int port;
+    
     public void main() {
         String hostname = "localhost";
-        int port = 9090;
+        int port = 1;
 
         try (Socket socket = new Socket(hostname, port);
              OutputStream output = socket.getOutputStream();
@@ -23,5 +25,11 @@ public class TCPClient {
         } catch (IOException ex) {
             System.out.println("I/O error: " + ex.getMessage());
         }
+    }
+
+    // Setting the port number that was made in Main
+    public void setPort(int x) {
+        this.port = x;
+        System.out.println("Client Port set to " + port);
     }
 }
