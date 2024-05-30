@@ -30,8 +30,8 @@ public class Main {
     }
     
     
-   //server.main();
-    //client.main();
+   server.main();
+   client.main();
   }
 
   public static int generatePort() {
