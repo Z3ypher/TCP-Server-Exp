@@ -6,7 +6,6 @@ public class TCPClient {
     
     public void main() {
         String hostname = "localhost";
-        int port = 1;
 
         try (Socket socket = new Socket(hostname, port);
              OutputStream output = socket.getOutputStream();
@@ -27,9 +26,9 @@ public class TCPClient {
         }
     }
 
-    // Setting the port number that was made in Main
+    // Setting the port number that was set in Main
     public void setPort(int x) {
         this.port = x;
-        System.out.println("Client Port set to " + port);
+        //System.out.println("Client Port set to " + port);
     }
 }

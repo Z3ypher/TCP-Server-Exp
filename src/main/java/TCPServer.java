@@ -23,7 +23,7 @@ public class TCPServer {
     // Setting the port number that was made in Main
     public void setPort(int x) {
         this.port = x;
-        System.out.println("Server Port set to " + port);
+        //System.out.println("Server Port set to " + port);
     }
 }
 

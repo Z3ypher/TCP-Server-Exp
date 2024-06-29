@@ -1,6 +1,5 @@
 /*
-The code created the box one time I was was able to type in it, but I couldnt verifiyed that it saved. The output tool shows the box, but the main file is not waiting for a response before moving on.
-Hence, I can only say it half worked.
+Need to figure out how to remove the GUI after saving the port number.
 
 */
 
